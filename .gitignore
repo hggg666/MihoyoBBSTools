@@ -5,7 +5,10 @@ __pycache__/
 
 # C extensions
 *.so
-
+#--------自定义忽略文件--------
+push.py
+captcha.py
+#--------自定义忽略文件--------
 # Distribution / packaging
 .Python
 build/
