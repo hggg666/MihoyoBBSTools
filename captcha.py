@@ -1,6 +1,6 @@
 from request import http
 import config
-
+from loghelper import log
 def game_captcha(gt: str, challenge: str):
 	appkey=config.config['captcha']['token']
 	log.warning(f"appkeygame：{appkey}")
