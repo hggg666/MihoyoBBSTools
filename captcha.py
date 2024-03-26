@@ -1,5 +1,5 @@
 from request import http
-
+import config
 
 def game_captcha(gt: str, challenge: str):
 	appkey=config.config['captcha']['token']
