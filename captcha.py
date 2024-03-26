@@ -3,7 +3,7 @@ from request import http
 
 def game_captcha(gt: str, challenge: str):
 	appkey=config.config['captcha']['token']
-    log.warning(f"appkeygame：{appkey}")
+	log.warning(f"appkeygame：{appkey}")
 	rep = http.post(
 		url= "http://api.rrocr.com/api/recognize.html",
 		data={
@@ -18,7 +18,7 @@ def game_captcha(gt: str, challenge: str):
 
 def bbs_captcha(gt: str, challenge: str):
 	appkey=config.config['captcha']['token']
-    log.warning(f"appkeybbs：{appkey}")
+	log.warning(f"appkeybbs：{appkey}")
 	rep = http.post(
 		url= "http://api.rrocr.com/api/recognize.html",
 		data={
