@@ -27,6 +27,15 @@ def get_config_path():
 
 
 def load_config():
+    path = os.path.dirname(os.path.realpath(__file__)) + "/config"
+    if os.getenv("AutoMihoyoBBS_config_path") is not None:
+        path = os.getenv("AutoMihoyoBBS_config_path")
+    config_prefix = os.getenv("AutoMihoyoBBS_config_prefix")
+    if config_prefix is None:
+        config_prefix = ""
+    config_path = f"{path}/{config_prefix}push.ini"
+    log.warning(f"config_path：{config_path}")
+    #config_path = os.path.join(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'config'), 'push.ini')
     file_path = get_config_path()
     if os.path.exists(file_path):
         cfg.read(file_path, encoding='utf-8')
