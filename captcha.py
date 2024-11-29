@@ -11,7 +11,8 @@ def game_captcha(gt: str, challenge: str):
 			"gt": gt,
 			"challenge": challenge,
 			"referer": "https://api-takumi.mihoyo.com/event/luna/sign"
-		}
+		},
+		timeout=90
 	).json()
 	return rep["data"]["validate"]
 
@@ -26,6 +27,7 @@ def bbs_captcha(gt: str, challenge: str):
 			"gt": gt,
 			"challenge": challenge,
 			"referer": "https://bbs-api.miyoushe.com/apihub/app/api/signIn"
-		}
+		},
+		timeout=90
 	).json()
 	return rep["data"]["validate"]
